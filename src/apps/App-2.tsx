@@ -1,15 +1,16 @@
 import pokemons from "../data/pokemons.json";
+import Filter from "./Componens/filter";
 
-function App() {
+function AppTwo() {
   console.log(pokemons);
   return (
     <div>
-      <h1>Happy Coding 🚀</h1>
-      <p> </p>
+      <h1>Filter</h1>
+      <article>
+        <div>{Filter()}</div>
+      </article>
     </div>
   )
-    
-
 }
 
-export default App;
+export default AppTwo;

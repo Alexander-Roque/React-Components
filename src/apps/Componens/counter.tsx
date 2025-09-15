@@ -30,15 +30,17 @@ export default function Counter(): JSX.Element{
     }
 
     return (
-        <div>
-            <p>Valor actual</p>
-            <p>{number}</p>
-            <button onClick={(_event) => handlerSum()}>+</button>
-            <button onClick={(_event)=> handlerSumTwo()}>++</button>
-            <button onClick={(_event)=> handlerReset()}>Reset</button>
-            <button onClick={(_event)=> handlerRandom()}>Random</button>
-            <button onClick={(_event)=> handlerRest()}>-</button>
-            <button onClick={(_event)=> handlerRestTwo()}>--</button>
+        <div className="counter">
+            <p className="text-counter">Valor actual</p>
+            <p className="number">{number}</p>
+            <div className="container-button">
+            <button className="button-counter" onClick={(_event) => handlerSum()}>+</button>
+            <button className="button-counter" onClick={(_event)=> handlerSumTwo()}>++</button>
+            <button className="button-counter" onClick={(_event)=> handlerReset()}>Reset</button>
+            <button className="button-counter" onClick={(_event)=> handlerRandom()}>Random</button>
+            <button className="button-counter" onClick={(_event)=> handlerRest()}>-</button>
+            <button className="button-counter" onClick={(_event)=> handlerRestTwo()}>--</button>
+            </div>
         </div>
     )
 }
