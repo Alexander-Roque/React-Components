@@ -20,9 +20,10 @@ export default function Filter (){
     const pokemonFilter = select === "all" ? pokemones : pokemones.filter((p)=>p.types.includes(select))
 
     return (
-        <div>
-            <p>Filter by Type</p>
-            <select
+        <div className="container-pokemon">
+            <div className="container-texts">
+            <p className="text-filter">Filter by Type</p>
+            <select className="select-type"
             value={select}
             name = "select"
             onChange={(event)=> setSelect(event.target.value)}
@@ -36,12 +37,13 @@ export default function Filter (){
                     ))
                 }
             </select>
-            <div>
+            </div>
+            <div className="container-cards">
                 {pokemonFilter.map(pokemon =>(
-                    <div key = {pokemon.id}>
-                        <img src= {pokemon.image_url} alt={pokemon.name}/>
-                        <p>{pokemon.name}</p>
-                        <p>{pokemon.types.join(", ")}</p>
+                    <div className="pokemons" key = {pokemon.id}>
+                        <img className="img-pokemon" src= {pokemon.image_url} alt={pokemon.name}/>
+                        <p className="pokemon-text">{pokemon.name}</p>
+                        <p className="pokemon-text-type">{pokemon.types.join(", ")}</p>
                     </div>
                 ))}
             </div>
